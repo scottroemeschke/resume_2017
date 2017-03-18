@@ -1,0 +1,16 @@
+{
+  "publications": [
+    {
+      "id": "hacker_noon",
+      "title": "Hacker Noon",
+      "img_asset": "/medium/publications/hacker_noon.png",
+      "tagline": "how hackers start their afternoons"
+    },
+    {
+      "id": "startup_grind",
+      "title": "Startup Grind",
+      "img_asset": "/medium/publications/startup_grind.png",
+      "tagline": "Startup Grind is a global startup community designed to educate, inspire, and connect entrepreneurs."
+    }
+  ]
+}
