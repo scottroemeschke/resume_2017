@@ -28,7 +28,7 @@ script:
   - echo "branch is $TRAVIS_BRANCH"
   - echo "pull_request is $TRAVIS_PULL+REQUEST"
   - ls -a
-  - cd resume_2017
+  - cd resume2017
   - echo "changed to application directory"
   - ls -a
   - echo "setting permissions on gradle wrapper"
