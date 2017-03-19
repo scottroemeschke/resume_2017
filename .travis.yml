@@ -30,10 +30,8 @@ script:
   - chmod +x gradlew
   - echo "building"
   - ./gradlew build
-  - echo "running unit tests"
+  - echo "running jvm tests"
   - ./gradlew test
-  - echo "generating code coverage report"
-  - ./gradlew createDebugCoverageReport
   - echo "running lint"
   - ./gradlew lint
   # - echo "running instrumented checks"
@@ -42,5 +40,4 @@ script:
 
 after_success:
   - echo "---successful!!---"
-  - coveralls
-
+  - gradle createDebugCoverageReport coveralls

@@ -1,0 +1,11 @@
+{
+  "name": {
+    "first": "scott",
+    "last": "meschke"
+  },
+  "android_start_year": 2013,
+  "description": "A versatile and creative coder with a focus on code quality and flawless UX. Enthusastic team member, continuous learner, and dedicated to creating products which smoke the competition. I create well-tested and simple code, with a focus on human readability and future maintainability."
+  "skills": [
+    "Java", "Kotlin", "Android OS", "Android UI", "Git", "Unit Testing", "UI Testing", "Application Architecture", "OO and Functional Paradigms", "HTTP and RESTful API", "Relational Databases"
+  ]
+}

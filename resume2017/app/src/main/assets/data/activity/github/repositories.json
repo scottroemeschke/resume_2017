@@ -1,0 +1,28 @@
+{
+  "repositories": [
+    {
+      "id": "nytimes_store",
+      "personal": false,
+      "url": "https://github.com/NYTimes/Store",
+      "description": "Android Library for Async Data Loading and Caching"
+    },
+    {
+      "id": "rafiki",
+      "personal": false,
+      "url": "https://github.com/orgs/creditera/rafiki",
+      "description": "Android components lifecycle and functional input/outputs"
+    },
+    {
+      "id": "rita",
+      "personal": false,
+      "url": "https://github.com/orgs/creditera/rita",
+      "description": "Java analytics facade and included integratations"
+    },
+    {
+      "id": "resume_2017",
+      "personal": true,
+      "url": "https://github.com/scottmeschke/resume_2017",
+      "description": "Personal Resume as an App"
+    }
+  ]
+}

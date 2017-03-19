@@ -1,0 +1,46 @@
+{
+  "stories": [
+    {
+      "title": "Teamwork Versus Work-Team! Leadership",
+      "url": "https://medium.com/@scottmeschke/teamwork-versus-work-team-leadership-b7f26c04240b#.vz7ncsu6b",
+      "date": "01-26-2017",
+      "length_in_min": 3,
+      "publication_id": "startup_grind"
+    },
+    {
+      "title": "RxRecipes: Piping into a Subject",
+      "url": "https://hackernoon.com/rxrecipes-piping-into-a-subject-3e2ac71fe760#.93wzv5vc1",
+      "date": "12-26-2016",
+      "length_in_min": 3,
+      "publication_id": "hacker_noon"
+    },
+    {
+      "title": "RxRecipes: Wrap your way to Rx",
+      "url": "https://hackernoon.com/rxrecipes-wrap-your-way-to-rx-fd40eb5254b6#.3jgbe7v78",
+      "date": "11-25-2016",
+      "length_in_min": 4,
+      "publication_id": "hacker_noon"
+    },
+    {
+      "title": "Android Decompile-Deepdive: Battle.net Authenticator",
+      "url": "https://medium.com/@scottmeschke/android-decompile-deepdive-battle-net-authenticator-dc1b1b65964#.hdwsw4h6u",
+      "date": "09-03-2016",
+      "length_in_min": 4,
+      "publication_id": null
+    },
+    {
+      "title": "Android Decompile-Deepdive: TED",
+      "url": "https://medium.com/@scottmeschke/android-decompile-deepdive-ted-cf97267229e#.sjqoipmk3",
+      "date": "07-24-2016",
+      "length_in_min": 7,
+      "publication_id": null
+    },
+    {
+      "title": "Android Decompile-Deepdive: Medium",
+      "url": "https://medium.com/@scottmeschke/android-decompile-deepdive-b3ab52194eb6#.gupy7j72q",
+      "date": "07-05-2016",
+      "length_in_min": 5,
+      "publication_id": null
+    }
+  ]
+}

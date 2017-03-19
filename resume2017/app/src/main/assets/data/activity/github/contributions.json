@@ -1,0 +1,12 @@
+{
+  "contributions": [
+    {
+      "date": "01-08-2017",
+      "repository_id": "nytimes_store",
+      "pull_request": {
+        "url": "https://github.com/NYTimes/Store/pull/35",
+        "description": "Added factories for SourcePersisters and the various GsonParser implementations. Updated README to use new factories. Updated example activity to use new factories. All factories return the general Store interfaces. Factories fail-fast on null."
+      }
+    }
+  ]
+}
