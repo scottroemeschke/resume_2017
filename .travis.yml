@@ -1,6 +1,3 @@
-before_install:
-  - pip install --user codecov
-
 jdk:
   - oraclejdk8
 language: android
@@ -25,22 +22,26 @@ cache:
     - $HOME/.gradle/wrapper #cache gradle
 
 script:
+  - echo "---begin script---"
   - echo "branch is $TRAVIS_BRANCH"
   - echo "pull_request is $TRAVIS_PULL+REQUEST"
-  - ls -a
   - cd resume2017
   - echo "changed to application directory"
-  - ls -a
   - echo "setting permissions on gradle wrapper"
   - chmod +x gradlew
   - echo "building"
   - ./gradlew build
   - echo "running unit tests"
   - ./gradlew test
+  - echo "generating code coverage report"
+  - ./gradlew createDebugCoverageReport
   - echo "running lint"
   - ./gradlew lint
   # - echo "running instrumented checks"
   # - ./gradlew connectedCheck
+  - echo "--finished script--"
 
 after_success:
-  - codecov
+  - echo "---successful!!---"
+  - echo -"uploading coverage report to codecov"
+  - bash <(curl -s https://codecov.io/bash)
