@@ -1,0 +1,40 @@
+before_install:
+  - pip install --user codecov
+
+jdk:
+  - oraclejdk8
+language: android
+android:
+  update_sdk: true
+  components:
+    - tools # to get the new `repository-11.xml`
+    - tools # see https://github.com/travis-ci/travis-ci/issues/6040#issuecomment-219367943)
+    - platform-tools
+    - build-tools-25.0.2
+    - android-25
+    - extra-google-m2repository
+    - extra-google-google_play_services
+    - extra-android-m2repository
+
+before_cache:
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+
+cache:
+  directories: #Cache all dirs under .gradle folder
+  - $HOME/.gradle/daemon  #cache daemon logs
+  - $HOME/.gradle/native  #cache library downloaded from gradle dependency
+  - $HOME/.gradle/wrapper #cache gradle
+
+before_script:
+  - chmod +x gradlew #permission
+
+script:
+  - echo "Travis: branch is $TRAVIS_BRANCH"
+  - echo "Travis: pull_request is $TRAVIS_PULL+REQUEST"
+   - ./gradlew build
+   - ./gradlew test
+   - ./gradlew lint
+   - ./gradlew connectedCheck
+
+after_success:
+  - codecov
