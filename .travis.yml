@@ -42,5 +42,4 @@ script:
 
 after_success:
   - echo "---successful!!---"
-  - coveralls
-
+  - gradle coveralls
