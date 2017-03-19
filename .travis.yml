@@ -42,5 +42,5 @@ script:
 
 after_success:
   - echo "---successful!!---"
-  - echo -"uploading coverage report to codecov"
-  - bash <(curl -s https://codecov.io/bash)
+  - coveralls
+
