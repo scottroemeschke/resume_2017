@@ -1,0 +1,46 @@
+jdk:
+  - oraclejdk8
+language: android
+android:
+  components:
+    - tools # to get the new `repository-11.xml`
+    - tools # see https://github.com/travis-ci/travis-ci/issues/6040#issuecomment-219367943)
+    - platform-tools
+    - build-tools-25.0.2
+    - android-25
+    - extra-google-m2repository
+    - extra-google-google_play_services
+    - extra-android-m2repository
+    
+before_script:
+  - echo "booting up emulator"
+  - echo no | android create avd --force -n test -t android-21 --abi armeabi-v7a
+  - emulator -avd test -no-skin -no-audio -no-window &
+  - android-wait-for-emulator
+  - adb shell input keyevent 82 &
+  - echo "finished booting emulator"
+
+script:
+  - echo "---begin script---"
+  - echo "branch is $TRAVIS_BRANCH"
+  - echo "pull_request is $TRAVIS_PULL+REQUEST"
+  - cd resume2017
+  - echo "changed to application directory"
+  - echo "setting permissions on gradle wrapper"
+  - chmod +x gradlew
+  - echo "building"
+  - ./gradlew build
+  - echo "running unit tests"
+  - ./gradlew test
+  - echo "generating code coverage report"
+  - ./gradlew createDebugCoverageReport
+  - echo "running lint"
+  - ./gradlew lint
+  # - echo "running instrumented checks"
+  # - ./gradlew connectedCheck
+  - echo "--finished script--"
+
+after_success:
+  - echo "---successful!!---"
+  - coveralls
+
