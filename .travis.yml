@@ -24,17 +24,21 @@ cache:
     - $HOME/.gradle/native  #cache library downloaded from gradle dependency
     - $HOME/.gradle/wrapper #cache gradle
 
-before_script:
-  - chmod +x gradlew #permission
-
 script:
-  - echo "Travis: branch is $TRAVIS_BRANCH"
-  - echo "Travis: pull_request is $TRAVIS_PULL+REQUEST"
+  - echo "branch is $TRAVIS_BRANCH"
+  - echo "pull_request is $TRAVIS_PULL+REQUEST"
   - cd resume_2017
+  - echo "changed to application directory"
+  - echo "setting permissions on gradle wrapper"
+  - chmod +x gradlew
+  - echo "building"
   - ./gradlew build
+  - echo "running unit tests"
   - ./gradlew test
+  - echo "running lint"
   - ./gradlew lint
-  - ./gradlew connectedCheck
+  # - echo "running instrumented checks"
+  # - ./gradlew connectedCheck
 
 after_success:
   - codecov
